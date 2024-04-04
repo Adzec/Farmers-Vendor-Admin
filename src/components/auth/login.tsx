@@ -40,7 +40,7 @@ const Login = () => {
                             id="password"
                             onChange={(e) => setPassword(e.target.value)}
                             value={password}
-                            className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
+                            className="w-full px-4 py-2 mt-2 border rounded-[8px] focus:outline-none focus:ring-1 focus:ring-blue-600"
                         />
                     </div>
                     <div className="flex items-baseline justify-between">
