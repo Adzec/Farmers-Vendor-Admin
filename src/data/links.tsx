@@ -14,7 +14,7 @@ const navItems = [
             { label: 'All', link: '#' },
             { label: 'Approved', link: '#' },
             { label: 'Pending', link: '#' },
-            { label: '', link: '#' },
+            // { label: '', link: '#' },
         ],
     },
 
