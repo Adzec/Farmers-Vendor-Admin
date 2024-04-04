@@ -2,7 +2,7 @@ import Login from './components/auth/login';
 
 const App = () => {
     return (
-        <div>
+        <div className="">
             <Login />
         </div>
     );

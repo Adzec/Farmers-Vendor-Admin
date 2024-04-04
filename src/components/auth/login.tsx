@@ -11,12 +11,12 @@ const Login = () => {
     };
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-gray-100">
-            <div className=" mt-4 text-left  bg-white shadow-lg w-full max-w-md h-96 mx-auto">
-                <h3 className="text-2xl font-bold text-center bg-primary text-white h-24 flex items-center justify-center rounded-t-[8px]">
+        <div className="flex items-center justify-center min-h-screen bg-black-100 lg:px-0  px-[10px]">
+            <div className=" mt-4 text-left  bg-white shadow-lg w-full max-w-md h-96 mx-auto  rounded-t-[8px] ">
+                <h3 className="text-2xl font-bold text-center bg-primary text-white h-24 flex items-center justify-center rounded-t-[5px]">
                     Administration
                 </h3>
-                <form onSubmit={handleSubmit} className="px-8 py-6">
+                <form onSubmit={handleSubmit} className="px-2 md:px-6 py-6">
                     <div className="mt-4">
                         <label className="block" htmlFor="email">
                             Email
