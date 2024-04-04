@@ -19,7 +19,7 @@ const Sidebar = ({ sidebar, toggleSidebar }: any) => {
     return (
         <div
             className={` p-5 fixed top-0 left-0  z-50  text-white  h-screen   transform duration-300  shadow-lg bg-black-200   ${
-                activeIndex !== null ? 'overflow-y-scroll' : ''
+                activeIndex !== null ? 'overflow-y-scroll custom-scrollbar' : ''
             } ${sidebar ? 'w-72' : ''}`}
         >
             {/* user profile */}
