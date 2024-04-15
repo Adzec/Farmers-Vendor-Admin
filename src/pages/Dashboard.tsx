@@ -1,10 +1,13 @@
+import Orders from '../components/Dashboard/orders';
+// import Others from '../components/Dashboard/others';
 import Layout from '../components/Layout';
 
 const Dashboard = () => {
     return (
         <div>
             <Layout>
-                <div>Hello Bitches</div>
+                <Orders />
+                {/* <Others /> */}
             </Layout>
         </div>
     );

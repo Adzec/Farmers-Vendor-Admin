@@ -42,7 +42,7 @@ const Layout = ({ children }: any) => {
                 </div>
                 <br />
 
-                <div className="p-[15px] ">{children}</div>
+                <div className="p-[15px] lg:px-20 ">{children}</div>
             </div>
         </div>
     );
