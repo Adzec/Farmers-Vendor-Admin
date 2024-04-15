@@ -1,6 +1,8 @@
-import { Avatar, Card } from 'antd';
+import { Card } from 'antd';
 import { sellers } from '../../Data/Data';
 import { RiMore2Fill } from 'react-icons/ri';
+import Image from '../../assets/image.avif';
+import { Avatar } from '@mui/material';
 
 const SellersTable = () => {
     return (
@@ -10,7 +12,10 @@ const SellersTable = () => {
                 {sellers.map((s, i) => (
                     <Card key={i} className="mb-2 bg-[#eee]  ">
                         <div className="flex justify-between items-center">
-                            <Avatar />
+                            <Avatar
+                                src={Image}
+                                className="h-24 w-24 object-cover border border-green-700"
+                            />
                             <div className="flex flex-col gap-1 items-center ">
                                 <p className="text-base line-clamp-1">{s.name}</p>
                                 <span>{s.phone}</span>
