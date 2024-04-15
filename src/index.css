@@ -1,12 +1,38 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
-
-body{
-    background-color: black;
+body {
+  font-family: 'Roboto', sans-serif;
 }
+
+
+.container {
+  width: 200px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, blue 50%, red 50%);
+  background-size: 200% 100%;
+  transition: background-position 0.5s;
+}
+
+.container:hover .box {
+  background-position: -100% 0;
+}
+
+
+
+
+
 
 @layer utilities {
     .slim-scrollbar::-webkit-scrollbar {

@@ -4,7 +4,7 @@ import { IconButton } from '@mui/material';
 
 const Cards: React.FC<CardProps> = ({ title, text, amount, url, icon: Icon, color }) => {
     return (
-        <Card className={`bg-${color}`}>
+        <Card className={`bg-${color}`} style={{ backgroundColor: `${color}` }}>
             <div className=" rounded-lg  flex gap-4 items-center justify-between">
                 <div className="flex flex-col">
                     <h2 className="text-xl font-bold mb-2">{title}</h2>

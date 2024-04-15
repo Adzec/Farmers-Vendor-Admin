@@ -15,21 +15,21 @@ const Orders = () => {
                     text="Total orders today"
                     amount="200"
                     icon={BsFillCartDashFill}
-                    color="orange-500"
+                    color="#f97316"
                 />
                 <Cards
                     title="Products"
                     text="Total orders this week"
                     amount="10"
                     icon={PiShoppingBagOpenFill}
-                    color="orange-900"
+                    color="#9a3412"
                 />
                 <Cards
                     title="Orders"
                     text="Total orders this month"
                     amount="7"
                     icon={IoPeople}
-                    color="orange-500"
+                    color="#ea580c"
                 />
             </div>
         </section>

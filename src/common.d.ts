@@ -8,3 +8,4 @@ export interface CardProps {
     icon?: IconType;
     color?: string;
 }
+
