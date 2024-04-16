@@ -116,8 +116,8 @@ const Users = () => {
                     columns={columns}
                     dataSource={users}
                     rowKey="_id"
-                    pagination={{ pageSize: 5, pageSizeOptions: ['5', '10', '20'] }}
-                    rowClassName={() => 'custom-row-style'}
+                    // pagination={{ pageSize: 5, pageSizeOptions: ['5', '10', '20'] }}
+                    // rowClassName={() => 'custom-row-style'}
                     className="overflow-x-scroll"
                 />
             </Card>
