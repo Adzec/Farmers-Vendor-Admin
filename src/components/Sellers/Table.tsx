@@ -98,7 +98,7 @@ const Users = () => {
             title: 'Created At',
             dataIndex: 'createdAt',
             key: 'createdAt',
-            render: (createdAt: string) => moment(createdAt).format('YYYY-MM-DD HH:MM:SS'),
+            render: (createdAt: string) => moment(createdAt).format('YY-MM-DD HH:MM'),
         },
         { title: 'Id', dataIndex: '_id', key: '_id' },
     ];
