@@ -1,11 +1,19 @@
-import user from '../assets/dummyLogo.jpeg';
+import userImage from '../assets/dummyLogo.jpeg';
 import { useState } from 'react';
 import { ChevronDown, Diamond, ArrowLeft } from 'lucide-react';
 import navItems from '../data/links';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Avatar } from '@mui/material';
+import { useSelector, useDispatch } from 'react-redux';
+import { logout } from '../store/features/userSlice';
+import { AppDispatch } from '../store/store';
+import { getInitials } from '../utils/utils';
 
 const Sidebar = ({ sidebar, toggleSidebar }: any) => {
+    const user = useSelector((state: any) => state.auth.user);
+    console.log(user);
+    const dispatch = useDispatch<AppDispatch>();
+    const navigate = useNavigate();
     const [activeIndex, setActiveIndex] = useState(null);
 
     // function to toggle active index
@@ -17,6 +25,11 @@ const Sidebar = ({ sidebar, toggleSidebar }: any) => {
         }
     };
 
+    const handleLogout = () => {
+        dispatch(logout());
+        navigate('/');
+    };
+
     return (
         <div
             className={` pt-5 fixed top-0 left-0  z-50  text-white  h-screen   transform duration-300  shadow-lg bg-black-200  flex flex-col  ${
@@ -26,7 +39,7 @@ const Sidebar = ({ sidebar, toggleSidebar }: any) => {
             {/* user profile */}
             <div className="flex flex-col items-center xl:gap-5 justify-between xl:justify-start  border-b border-gray-700 pb-5 px-10">
                 <span className="bg-gray-200 rounded-[50%] ">
-                    <Avatar src={user} style={{ height: '100px', width: '100px' }} />
+                    <Avatar src={userImage} style={{ height: '100px', width: '100px' }} />
                     {/* <img src={user} alt="" className="w-14 h-14 object-fit" /> */}
                 </span>
                 <span className="">
@@ -95,12 +108,22 @@ const Sidebar = ({ sidebar, toggleSidebar }: any) => {
                 ))}
             </ul>
 
-            <div className="mt-auto px-5 py-4 bg-gray-900 ">
+            <div className="mt-auto px-5 py-5 bg-gray-900 ">
+                <div className="flex flex-col items-center  gap-2 py-4">
+                    <span className="text-white text-sm mr-2 bg-red-700 p-2 rounded-full font-bold customShadow">
+                        {user && getInitials(user)}
+                    </span>
+                    <p className="capitalize  font-bold">{user?.adminName}</p>
+                    <p className="text-sm">{user?.adminEmail}</p>
+                </div>
                 <div className="flex justify-between">
                     <button className="text-white bg-blue-500 hover:bg-blue-700 font-bold py-2 px-4 rounded">
                         Settings
                     </button>
-                    <button className="text-white bg-red-500 hover:bg-red-700 font-bold py-2 px-4 rounded">
+                    <button
+                        className="text-white bg-red-500 hover:bg-red-700 font-bold py-2 px-4 rounded"
+                        onClick={handleLogout}
+                    >
                         Logout
                     </button>
                 </div>
