@@ -1,8 +1,9 @@
-// import user from '../assets/user.png';
+import user from '../assets/dummyLogo.jpeg';
 import { useState } from 'react';
 import { ChevronDown, Diamond, ArrowLeft } from 'lucide-react';
 import navItems from '../data/links';
 import { Link } from 'react-router-dom';
+import { Avatar } from '@mui/material';
 
 const Sidebar = ({ sidebar, toggleSidebar }: any) => {
     const [activeIndex, setActiveIndex] = useState(null);
@@ -18,19 +19,20 @@ const Sidebar = ({ sidebar, toggleSidebar }: any) => {
 
     return (
         <div
-            className={` p-5 fixed top-0 left-0  z-50  text-white  h-screen   transform duration-300  shadow-lg bg-black-200   ${
+            className={` pt-5 fixed top-0 left-0  z-50  text-white  h-screen   transform duration-300  shadow-lg bg-black-200  flex flex-col  ${
                 activeIndex !== null ? 'overflow-y-scroll custom-scrollbar' : ''
             } ${sidebar ? 'w-72' : ''}`}
         >
             {/* user profile */}
-            <div className="flex xl:gap-5 justify-between xl:justify-start items-start border-b pb-5">
+            <div className="flex flex-col items-center xl:gap-5 justify-between xl:justify-start  border-b border-gray-700 pb-5 px-10">
                 <span className="bg-gray-200 rounded-[50%] ">
+                    <Avatar src={user} style={{ height: '100px', width: '100px' }} />
                     {/* <img src={user} alt="" className="w-14 h-14 object-fit" /> */}
                 </span>
                 <span className="">
-                    <p>Welcome,</p>
+                    <p className="text-bold text-xl">Welcome</p>
                     <p className="font-semibold flex text-sm">
-                        <>Admin</>
+                        <p>Admin panel</p>
                         {/* <ChevronDown /> */}
                     </p>
                 </span>
@@ -51,7 +53,7 @@ const Sidebar = ({ sidebar, toggleSidebar }: any) => {
                 <CircleHelp color="#606060" size={20} />
             </div> */}
             {/* ul */}
-            <ul className="mt-8 flex w-full flex-col gap-6 text-base pl-5">
+            <ul className="mt-8 flex w-full flex-col gap-6 text-base pl-5 px-5">
                 {navItems.map((item, index) => (
                     <li
                         key={index}
@@ -92,6 +94,17 @@ const Sidebar = ({ sidebar, toggleSidebar }: any) => {
                     </li>
                 ))}
             </ul>
+
+            <div className="mt-auto px-5 py-4 bg-gray-900 ">
+                <div className="flex justify-between">
+                    <button className="text-white bg-blue-500 hover:bg-blue-700 font-bold py-2 px-4 rounded">
+                        Settings
+                    </button>
+                    <button className="text-white bg-red-500 hover:bg-red-700 font-bold py-2 px-4 rounded">
+                        Logout
+                    </button>
+                </div>
+            </div>
         </div>
     );
 };

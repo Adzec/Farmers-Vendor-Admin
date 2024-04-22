@@ -7,7 +7,7 @@ const Orders = () => {
     return (
         <section className="flex flex-col">
             <div>
-                <h1 className="text-white text-2xl font-bold px-[5px] pb-4"> Analytics</h1>
+                <h1 className="text-white text-2xl font-bold px-[5px] pb-4"> Dashboard</h1>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4  ">
                 <Cards

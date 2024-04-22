@@ -9,3 +9,8 @@ export interface CardProps {
     color?: string;
 }
 
+
+export interface UserProps{
+    email?: string;
+    password?:string
+}
