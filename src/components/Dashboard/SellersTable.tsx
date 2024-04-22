@@ -8,7 +8,7 @@ const SellersTable = () => {
     return (
         <section className="flex mt-10 flex-col h-auto">
             <h1 className="text-white p-[5px] text-2xl font-bold">Recent Sellers</h1>
-            <Card className="overflow-x-auto  py-5 w-full flex flex-col gap-2 h-full ">
+            <Card className="overflow-x-auto  py-5 w-full flex flex-col gap-2 h-full customShadow">
                 {sellers.map((s, i) => (
                     <Card key={i} className="mb-2 bg-[#eee]  ">
                         <div className="flex justify-between items-center">
