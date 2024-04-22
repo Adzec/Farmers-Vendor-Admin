@@ -27,7 +27,7 @@ const Sidebar = ({ sidebar, toggleSidebar }: any) => {
 
     const handleLogout = () => {
         dispatch(logout());
-        navigate('/');
+        navigate('/login');
     };
 
     return (

@@ -1,3 +1,4 @@
+import { toast } from 'react-toastify';
 import { axiosService } from '../helpers/axios';
 
 export const RegisterUser = async (payload: any): Promise<any> => {
@@ -19,6 +20,8 @@ export const LoginUser = async (payload: any): Promise<any> => {
         return response;
     } catch (error: any) {
         console.log(error, 'a terrible error occurred');
+        toast.error(error.response.data.message);
+
         throw new Error(error.message);
     }
 };

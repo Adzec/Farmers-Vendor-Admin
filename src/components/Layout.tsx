@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Sidebar from '../components/Sidebar';
 import { Menu } from 'lucide-react';
+import PrivateRoute from '../routes/ProtectedRoutes';
 
 const Layout = ({ children }: any) => {
     // toggle sidebar
@@ -28,23 +29,25 @@ const Layout = ({ children }: any) => {
     }, []);
 
     return (
-        <div className="flex w-full bg-black-100">
-            {/* Sidebar */}
-            {sidebar && <Sidebar sidebar={sidebar} toggleSidebar={toggleSidebar} />}
-            <div
-                className={`flex flex-col w-full gap-4  py-2 min-h-screen ${
-                    sidebar ? 'xl:ml-72' : ''
-                }`}
-            >
-                {/* menu icon to open and close sidebar */}
-                <div className=" shadow-lg text-white fixed   flex gap-2 w-full top-0  py-3 px-5 z-40 bg-black-200">
-                    <Menu onClick={toggleSidebar} className="cursor-pointer" /> MENU
-                </div>
-                <br />
+        <PrivateRoute>
+            <div className="flex w-full bg-black-100">
+                {/* Sidebar */}
+                {sidebar && <Sidebar sidebar={sidebar} toggleSidebar={toggleSidebar} />}
+                <div
+                    className={`flex flex-col w-full gap-4  py-2 min-h-screen ${
+                        sidebar ? 'xl:ml-72' : ''
+                    }`}
+                >
+                    {/* menu icon to open and close sidebar */}
+                    <div className=" shadow-lg text-white fixed   flex gap-2 w-full top-0  py-3 px-5 z-40 bg-black-200">
+                        <Menu onClick={toggleSidebar} className="cursor-pointer" /> MENU
+                    </div>
+                    <br />
 
-                <div className="p-[15px] lg:px-20 ">{children}</div>
+                    <div className="p-[15px] lg:px-20 ">{children}</div>
+                </div>
             </div>
-        </div>
+        </PrivateRoute>
     );
 };
 

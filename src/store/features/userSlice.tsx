@@ -44,7 +44,7 @@ export const RegisterAUser = createAsyncThunk(
                 return response;
             }
         } catch (error: any) {
-            console.error('Error in Registering User:', error.response.data.Error);
+            console.log('Error in Registering User:', error.response.data.Error);
             toast.error(error.response.data.Message);
             return Promise.reject(error);
         }
@@ -61,17 +61,18 @@ export const LoggingUser = createAsyncThunk(
             if (response.status === 200) {
                 localStorage.setItem('farmers-vendor-admin-token', response.data.data.accessToken);
                 localStorage.setItem('admin-info', JSON.stringify(response.data.data));
-                toast.success(`Welcome, ${response.data.data.userName}`);
+                toast.success(`Welcome, ${response.data.data.adminName}`);
                 setTimeout(() => {
                     navigate('/');
                 }, 2000);
                 return response.data;
             } else {
-                toast.error(response.data.Message);
+                toast.error(response.data.message);
                 return Promise.reject(new Error(response.data.Message));
             }
         } catch (error: any) {
-            toast.error(error.response.data.Message);
+            toast.error(error.response.data.data.message);
+            console.log(error.response.data.data.message);
             return Promise.reject(error);
         }
     }
@@ -86,7 +87,7 @@ const authSlice = createSlice({
         },
         logout: (state) => {
             state.user = null;
-            localStorage.removeItem('farmers-vendor-adm-token');
+            localStorage.removeItem('farmers-vendor-admin-token');
             localStorage.removeItem('admin-info');
             state.userToken = null;
         },

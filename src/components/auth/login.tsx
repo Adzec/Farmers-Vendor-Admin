@@ -27,8 +27,6 @@ const Login = () => {
 
         // Dispatch your Redux action to log the user in, passing formData and navigate function
         await dispatch(LoggingUser({ formData, navigate }));
-
-        console.log('Logging in with:', formData);
     };
 
     return (
