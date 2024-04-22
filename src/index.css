@@ -87,3 +87,16 @@ body {
     .customShadow {
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     }
+
+  
+    
+    /* Example of custom styles */
+    .custom-toast {
+      padding: 16px; /* Padding */
+      height: 100%;
+    }
+    
+    .custom-toast:hover {
+      cursor: pointer; /* Change cursor on hover */
+    }
+    
