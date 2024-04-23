@@ -32,7 +32,7 @@ const navItems = [
     {
         label: 'Sellers',
         icon: Users,
-        link: '#',
+        link: '/sellers',
         children: [
             { label: 'Approved', link: '/sellers/approved' },
             { label: 'Pending', link: '#' },
