@@ -19,14 +19,14 @@ const Orders = () => {
                 />
                 <Cards
                     title="Products"
-                    text="Total orders this week"
+                    text="Total products Today"
                     amount="10"
                     icon={PiShoppingBagOpenFill}
                     color="#9a3412"
                 />
                 <Cards
                     title="Sellers"
-                    text="Total orders this month"
+                    text="Total sellers today"
                     amount="7"
                     icon={IoPeople}
                     color="#ea580c"
