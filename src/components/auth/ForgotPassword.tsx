@@ -1,16 +1,16 @@
 import { useState } from 'react';
-import { FaEye, FaEyeSlash } from 'react-icons/fa';
+// import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { LoggingUser } from '../../store/features/userSlice';
 import { AppDispatch } from '../../store/store';
 
-const Login = () => {
+const ForgotPasswordComponent = () => {
     const [formData, setFormData] = useState({
         adminUserName: '',
         password: '',
     });
-    const [showPassword, setShowPassword] = useState(false); // State to toggle password visibility
+
     const dispatch = useDispatch<AppDispatch>();
     const navigate = useNavigate();
 
@@ -36,6 +36,9 @@ const Login = () => {
                     Administration
                 </h3>
                 <form onSubmit={handleSubmit} className="px-2 md:px-6 py-6">
+                    <p className="text-sm text-gray-700 my-2">
+                        Enter your Account Email to receive a password reset code
+                    </p>
                     <div className="mt-4">
                         <label className="block" htmlFor="adminUserName">
                             Email
@@ -50,36 +53,13 @@ const Login = () => {
                             className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
                         />
                     </div>
-                    <div className="mt-4 relative">
-                        <label className="block" htmlFor="password">
-                            Password
-                        </label>
-                        <input
-                            type={showPassword ? 'text' : 'password'}
-                            placeholder="Password"
-                            id="password"
-                            name="password"
-                            onChange={handleInputChange}
-                            value={formData.password}
-                            className="w-full px-4 py-2 mt-2 border rounded-[8px] focus:outline-none focus:ring-1 focus:ring-blue-600"
-                        />
-                        <button
-                            type="button"
-                            onClick={() => setShowPassword(!showPassword)}
-                            className="absolute top-10 inset-y-0 right-0 pr-3 flex items-center text-sm leading-5"
-                        >
-                            {showPassword ? <FaEyeSlash /> : <FaEye />}
-                        </button>
-                    </div>
-                    <div className="flex items-baseline justify-between">
+
+                    <div className="flex items-baseline justify-between my-3">
                         <button className="px-6 py-2 mt-4 text-white bg-primary rounded-lg hover:bg-secondary">
-                            Login
+                            Request code
                         </button>
-                        <Link
-                            to="/forgot-password"
-                            className="text-sm text-blue-600 hover:underline"
-                        >
-                            Forgot password?
+                        <Link to="#" className="text-sm text-blue-600 hover:underline">
+                            Back to login
                         </Link>
                     </div>
                 </form>
@@ -88,4 +68,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default ForgotPasswordComponent;

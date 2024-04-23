@@ -6,6 +6,7 @@ import { ToastContainer } from 'react-toastify';
 import { customToastContainerStyle } from '../utils/utils';
 import SellerAnalysis from '../pages/Sellers/Analytics';
 import PendingSellers from '../pages/Sellers/Pending';
+import ForgotPassword from '../pages/ForgotPassword';
 
 const Paths = () => {
     return (
@@ -17,6 +18,7 @@ const Paths = () => {
             />
             <Routes>
                 <Route path="/login" element={<Login />} />
+                <Route path="/forgot-password" element={<ForgotPassword />} />
                 <Route path="/" element={<Dashboard />} />
                 <Route path="/sellers" element={<SellerAnalysis />} />
                 <Route path="/sellers/pending" element={<PendingSellers />} />

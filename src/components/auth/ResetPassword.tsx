@@ -36,19 +36,26 @@ const Login = () => {
                     Administration
                 </h3>
                 <form onSubmit={handleSubmit} className="px-2 md:px-6 py-6">
-                    <div className="mt-4">
-                        <label className="block" htmlFor="adminUserName">
-                            Email
+                    <div className="mt-4 relative">
+                        <label className="block" htmlFor="password">
+                            Password
                         </label>
                         <input
-                            type="email"
-                            placeholder="Email"
-                            id="adminUserName"
-                            name="adminUserName"
+                            type={showPassword ? 'text' : 'password'}
+                            placeholder="Enter a  new password"
+                            id="password"
+                            name="password"
                             onChange={handleInputChange}
-                            value={formData.adminUserName}
-                            className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
+                            value={formData.password}
+                            className="w-full px-4 py-2 mt-2 border rounded-[8px] focus:outline-none focus:ring-1 focus:ring-blue-600"
                         />
+                        <button
+                            type="button"
+                            onClick={() => setShowPassword(!showPassword)}
+                            className="absolute top-10 inset-y-0 right-0 pr-3 flex items-center text-sm leading-5"
+                        >
+                            {showPassword ? <FaEyeSlash /> : <FaEye />}
+                        </button>
                     </div>
                     <div className="mt-4 relative">
                         <label className="block" htmlFor="password">
@@ -56,7 +63,7 @@ const Login = () => {
                         </label>
                         <input
                             type={showPassword ? 'text' : 'password'}
-                            placeholder="Password"
+                            placeholder="Enter a  new password"
                             id="password"
                             name="password"
                             onChange={handleInputChange}
@@ -73,13 +80,10 @@ const Login = () => {
                     </div>
                     <div className="flex items-baseline justify-between">
                         <button className="px-6 py-2 mt-4 text-white bg-primary rounded-lg hover:bg-secondary">
-                            Login
+                            Reset Password
                         </button>
-                        <Link
-                            to="/forgot-password"
-                            className="text-sm text-blue-600 hover:underline"
-                        >
-                            Forgot password?
+                        <Link to="/login" className="text-sm text-blue-600 hover:underline">
+                            Back to login
                         </Link>
                     </div>
                 </form>
