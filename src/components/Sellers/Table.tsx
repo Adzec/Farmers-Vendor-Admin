@@ -1,4 +1,4 @@
-import { Avatar, Card, Table, Typography } from 'antd';
+import { Avatar, Card, Table } from 'antd';
 
 import moment from 'moment';
 import { useState, useEffect } from 'react';
