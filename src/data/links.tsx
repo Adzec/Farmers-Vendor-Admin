@@ -35,8 +35,8 @@ const navItems = [
         link: '/sellers',
         children: [
             { label: 'Approved', link: '/sellers/approved' },
-            { label: 'Pending', link: '#' },
-            { label: 'Rejected', link: '#' },
+            { label: 'Pending', link: '/sellers/pending' },
+            // { label: 'Rejected', link: '#' },
             // { label: '', link: '#' },
         ],
     },

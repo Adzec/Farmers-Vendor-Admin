@@ -6,6 +6,9 @@ import type { FilterDropdownProps } from 'antd/es/table/interface';
 import Highlighter from 'react-highlight-words';
 import { Avatar } from 'antd';
 import moment from 'moment';
+import { useNavigate } from 'react-router-dom';
+import { FiMoreVertical } from 'react-icons/fi';
+import { FaRegTrashCan } from 'react-icons/fa6';
 
 interface DataType {
     key?: string;
@@ -17,6 +20,7 @@ interface DataType {
     role?: string;
     active?: boolean;
     createdAt?: string;
+    phone?: string;
 }
 
 type DataIndex = keyof DataType;
@@ -30,6 +34,7 @@ const data: DataType[] = [
         role: 'seller',
         active: true,
         createdAt: '2022-01-01T12:00:00Z',
+        phone: '0791039923',
     },
     {
         key: '2',
@@ -39,6 +44,7 @@ const data: DataType[] = [
         role: 'seller',
         active: false,
         createdAt: '2022-01-02T12:00:00Z',
+        phone: '0791039923',
     },
     {
         key: '3',
@@ -48,6 +54,7 @@ const data: DataType[] = [
         role: 'seller',
         active: true,
         createdAt: '2022-01-01T12:00:00Z',
+        phone: '0791039923',
     },
     {
         key: '4',
@@ -57,10 +64,12 @@ const data: DataType[] = [
         role: 'seller',
         active: false,
         createdAt: '2022-01-02T12:00:00Z',
+        phone: '0791039923',
     },
 ];
 
 const App: React.FC = () => {
+    const navigate = useNavigate();
     const [searchText, setSearchText] = useState('');
     const [searchedColumn, setSearchedColumn] = useState('');
     const searchInput = useRef<InputRef>(null);
@@ -176,17 +185,15 @@ const App: React.FC = () => {
             title: 'Name',
             dataIndex: 'name',
             key: 'name',
-            width: '30%',
+            // width: '30%',
             ...getColumnSearchProps('name'),
         },
         {
-            title: 'Active',
-            dataIndex: 'active',
-            key: 'active',
-            render: (active: boolean) => (active ? 'Active' : 'InActive'),
-            // ...getColumnSearchProps(''),
+            title: 'Phone',
+            dataIndex: 'phone',
+            key: 'phone',
+            ...getColumnSearchProps('name'),
         },
-
         {
             title: 'Email',
             dataIndex: 'email',
@@ -201,11 +208,32 @@ const App: React.FC = () => {
             key: 'createdAt',
             render: (createdAt: string) => moment(createdAt).format('YY-MM-DD HH:MM'),
         },
+        {
+            title: 'Actions',
+            dataIndex: 'action',
+            render: (_text: any, _record: any) => (
+                <div className="flex mr-2 gap-4 ">
+                    <button className="hover:underline ">Deactivate</button>
+                    <FaRegTrashCan
+                        className="text-red-500"
+                        onClick={() => {
+                            console.log('clicked');
+                        }}
+                    />
+                    <FiMoreVertical
+                        className="text-green-500"
+                        onClick={() => {
+                            console.log('clicked');
+                        }}
+                    />
+                </div>
+            ),
+        },
     ];
 
     return (
         <Card>
-            <Table columns={columns} dataSource={data} />
+            <Table columns={columns} dataSource={data} className="overflow-x-scroll" />
         </Card>
     );
 };

@@ -1,5 +1,5 @@
 import Layout from '../../components/Layout';
-import App from '../../components/Products/Recent';
+import App from '../Sellers/Recent';
 import Users from '../../components/Sellers/Table';
 
 const Dashboard = () => {
