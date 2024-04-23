@@ -1,4 +1,12 @@
-import { Gauge, Layers3, Mail, ShoppingCart, Users, UsersRound } from 'lucide-react';
+import {
+    BaggageClaimIcon,
+    Gauge,
+    Layers3,
+    Mail,
+    ShoppingCart,
+    Users,
+    UsersRound,
+} from 'lucide-react';
 
 const navItems = [
     {
@@ -8,7 +16,7 @@ const navItems = [
     },
     {
         label: 'Products',
-        icon: Mail,
+        icon: BaggageClaimIcon,
         link: '#',
         children: [
             { label: 'All', link: '#' },
