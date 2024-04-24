@@ -2,15 +2,16 @@ import { useState } from 'react';
 // import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
-import { RequestPassReset } from '../../store/features/AuthSlice';
+import { ConfirmCode } from '../../store/features/AuthSlice';
 import { AppDispatch } from '../../store/store';
 import Loading from '../Global/loading';
 
-const ForgotPasswordComponent = () => {
+const ConfirmCodeComp = () => {
     const { loading, passwordToken } = useSelector((state: any) => state.auth);
     console.log(`token is:${passwordToken}, and loading state is ${loading}`);
     const [formData, setFormData] = useState({
-        userEmail: '',
+        requestCode: '',
+        RequestToken: passwordToken,
     });
 
     const dispatch = useDispatch<AppDispatch>();
@@ -28,7 +29,7 @@ const ForgotPasswordComponent = () => {
         e.preventDefault();
 
         // Dispatch your Redux action to log the user in, passing formData and navigate function
-        await dispatch(RequestPassReset({ formData, navigate }));
+        await dispatch(ConfirmCode({ formData, navigate }));
     };
 
     return (
@@ -43,16 +44,16 @@ const ForgotPasswordComponent = () => {
                         Enter your Account Email to receive a password reset code
                     </p>
                     <div className="mt-4">
-                        <label className="block" htmlFor="userEmail">
+                        <label className="block" htmlFor="requestCode">
                             Email
                         </label>
                         <input
-                            type="email"
-                            placeholder="Email"
-                            id="userEmail"
-                            name="userEmail"
+                            type="text"
+                            placeholder="Enter confirmation code"
+                            id="requestCode"
+                            name="requestCode"
                             onChange={handleInputChange}
-                            value={formData.userEmail}
+                            value={formData.requestCode}
                             className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
                             required
                         />
@@ -72,4 +73,4 @@ const ForgotPasswordComponent = () => {
     );
 };
 
-export default ForgotPasswordComponent;
+export default ConfirmCodeComp;

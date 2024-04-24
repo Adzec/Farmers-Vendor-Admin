@@ -1,5 +1,5 @@
 import { BsFillCartDashFill } from 'react-icons/bs';
-import Cards from '../Global.tsx/Cards/Cards';
+import Cards from '../Global/Cards/Cards';
 import { IoPeople } from 'react-icons/io5';
 import { PiShoppingBagOpenFill } from 'react-icons/pi';
 

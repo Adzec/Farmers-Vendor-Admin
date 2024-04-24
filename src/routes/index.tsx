@@ -7,6 +7,8 @@ import { customToastContainerStyle } from '../utils/utils';
 import SellerAnalysis from '../pages/Sellers/Analytics';
 import PendingSellers from '../pages/Sellers/Pending';
 import ForgotPassword from '../pages/ForgotPassword';
+import ConfirmCodePage from '../pages/ConfirmCodePage';
+import ResetPasswordPage from '../pages/ResetPasswordPage';
 
 const Paths = () => {
     return (
@@ -18,6 +20,8 @@ const Paths = () => {
             />
             <Routes>
                 <Route path="/login" element={<Login />} />
+                <Route path="/reset-password" element={<ResetPasswordPage />} />
+                <Route path="/confirm-code" element={<ConfirmCodePage />} />
                 <Route path="/forgot-password" element={<ForgotPassword />} />
                 <Route path="/" element={<Dashboard />} />
                 <Route path="/sellers" element={<SellerAnalysis />} />

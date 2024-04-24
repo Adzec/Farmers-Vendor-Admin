@@ -1,5 +1,5 @@
 import { FaUsers } from 'react-icons/fa';
-import Cards from '../Global.tsx/Cards/Cards';
+import Cards from '../Global/Cards/Cards';
 
 const SellerAnalysis = () => {
     return (

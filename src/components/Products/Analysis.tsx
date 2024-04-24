@@ -1,4 +1,4 @@
-import Cards from '../Global.tsx/Cards/Cards';
+import Cards from '../Global/Cards/Cards';
 
 import { FaListUl, FaListOl } from 'react-icons/fa';
 

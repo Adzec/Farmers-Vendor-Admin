@@ -1,5 +1,5 @@
 import { BsFillCartDashFill } from 'react-icons/bs';
-import Cards from '../Global.tsx/Cards/Cards';
+import Cards from '../Global/Cards/Cards';
 
 const Orders = () => {
     return (

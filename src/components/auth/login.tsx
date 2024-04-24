@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
-import { LoggingUser } from '../../store/features/userSlice';
+import { LoggingUser } from '../../store/features/AuthSlice';
 import { AppDispatch } from '../../store/store';
 
 const Login = () => {

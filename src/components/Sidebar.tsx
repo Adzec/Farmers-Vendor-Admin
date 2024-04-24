@@ -5,7 +5,7 @@ import navItems from '../data/links';
 import { Link, useNavigate } from 'react-router-dom';
 import { Avatar } from '@mui/material';
 import { useSelector, useDispatch } from 'react-redux';
-import { logout } from '../store/features/userSlice';
+import { logout } from '../store/features/AuthSlice';
 import { AppDispatch } from '../store/store';
 import { getInitials } from '../utils/utils';
 
