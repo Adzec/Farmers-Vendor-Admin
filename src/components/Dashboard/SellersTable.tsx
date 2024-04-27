@@ -10,7 +10,7 @@ const SellersTable = () => {
             <h1 className="text-white p-[5px] text-2xl font-bold">Recent Sellers</h1>
             <Card className="overflow-x-auto  py-5 w-full flex flex-col gap-2 h-full customShadow">
                 {sellers.map((s, i) => (
-                    <Card key={i} className="mb-2 bg-[#eee]  ">
+                    <Card key={i} className="mb-2 bg-[#eee]  customShadow">
                         <div className="flex justify-between items-center">
                             <Avatar
                                 src={Image}

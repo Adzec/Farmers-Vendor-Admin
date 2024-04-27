@@ -17,7 +17,7 @@ const navItems = [
     {
         label: 'Products',
         icon: BaggageClaimIcon,
-        link: '#',
+        link: '/products',
         children: [
             // { label: 'All', link: '#' },
             { label: 'Approved', link: '#' },

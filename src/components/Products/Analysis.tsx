@@ -24,7 +24,7 @@ const ProductsAnalysis = () => {
                     color="#9a3412"
                 />
                 <Cards
-                    title="Sellers"
+                    title="products"
                     text="Total added this month"
                     amount="7"
                     icon={FaListUl}
