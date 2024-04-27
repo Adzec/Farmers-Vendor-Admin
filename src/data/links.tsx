@@ -19,7 +19,7 @@ const navItems = [
         icon: BaggageClaimIcon,
         link: '#',
         children: [
-            { label: 'All', link: '#' },
+            // { label: 'All', link: '#' },
             { label: 'Approved', link: '#' },
             { label: 'Pending', link: '#' },
             // { label: '', link: '#' },
