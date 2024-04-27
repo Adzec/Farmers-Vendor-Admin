@@ -12,10 +12,10 @@ const ProductGraph = () => {
             xaxis: {
                 categories: ['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun'],
             },
-            // colors: ['#F44336', '#E91E63', '#9C27B0'],
-            // fill: {
-            //     colors: ['#F44336', '#E91E63', '#9C27B0'],
-            // },
+            colors: ['#052e16', '#15803d', '#9C27B0'],
+            fill: {
+                colors: ['#4ade80', '#22c55e', '#9C27B0'],
+            },
         },
         series: [
             {
