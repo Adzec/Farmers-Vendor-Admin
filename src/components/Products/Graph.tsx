@@ -12,10 +12,10 @@ const ProductGraph = () => {
             xaxis: {
                 categories: ['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun'],
             },
-            colors: ['#F44336', '#E91E63', '#9C27B0'],
-            fill: {
-                colors: ['#F44336', '#E91E63', '#9C27B0'],
-            },
+            // colors: ['#F44336', '#E91E63', '#9C27B0'],
+            // fill: {
+            //     colors: ['#F44336', '#E91E63', '#9C27B0'],
+            // },
         },
         series: [
             {
@@ -38,8 +38,15 @@ const ProductGraph = () => {
             <div>
                 <h1 className="text-white text-2xl font-bold px-[5px] pb-4">Products Overview</h1>
             </div>
-            <Card className="">
-                <Chart options={options} series={series} type="bar" height={500} />
+            <Card className="overflow-x-scroll">
+                <Chart
+                    options={options}
+                    series={series}
+                    type="bar"
+                    height={500}
+                    width={450}
+                    style={{ width: '100%' }}
+                />
             </Card>
         </section>
     );
