@@ -11,6 +11,7 @@ import ConfirmCodePage from '../pages/ConfirmCodePage';
 import ResetPasswordPage from '../pages/ResetPasswordPage';
 import ProductsDash from '../pages/Products/ProductsDash';
 import ApperovedProducts from '../pages/Products/Approved';
+import PendingProducts from '../pages/Products/Pending';
 
 const Paths = () => {
     return (
@@ -28,6 +29,7 @@ const Paths = () => {
                 <Route path="/" element={<Dashboard />} />
                 <Route path="/products" element={<ProductsDash />} />
                 <Route path="/products/approved" element={<ApperovedProducts />} />
+                <Route path="/products/pending" element={<PendingProducts />} />
                 <Route path="/sellers" element={<SellerAnalysis />} />
                 <Route path="/sellers/pending" element={<PendingSellers />} />
                 <Route path="/sellers/approved" element={<ApprovedUsers />} />

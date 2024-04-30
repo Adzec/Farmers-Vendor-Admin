@@ -1,7 +1,7 @@
 import Layout from '../../components/Layout';
-import ProductTable from '../../components/Products/Approved';
+import ProductTable from '../../components/Products/Pending';
 
-const ApprovedProducts = () => {
+const PendingProducts = () => {
     return (
         <Layout>
             <ProductTable />
@@ -9,4 +9,4 @@ const ApprovedProducts = () => {
     );
 };
 
-export default ApprovedProducts;
+export default PendingProducts;
