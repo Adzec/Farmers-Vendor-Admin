@@ -55,7 +55,7 @@ const ProductTable = () => {
                         </tr>
                     </thead>
                     <tbody className="bg-white divide-y divide-gray-200">
-                        {products.map((p, index) => (
+                        {products?.slice(0, 6).map((p, index) => (
                             <tr key={index}>
                                 <td className="px-6 py-4 whitespace-nowrap">{p?.name}</td>
                                 <td className="px-6 py-4 whitespace-nowrap">
@@ -65,8 +65,10 @@ const ProductTable = () => {
                                         className="h-10 w-10 rounded-full object-cover"
                                     />
                                 </td>
-                                <td className="px-6 py-4 whitespace-nowrap">{p?.seller}</td>
-                                <td className="px-6 py-4 whitespace-nowrap">{p?.status}</td>
+                                <td className="px-6 py-4 whitespace-nowrap">{'Jane Doe'}</td>
+                                <td className="px-6 py-4 whitespace-nowrap">
+                                    {p?.inStock ? 'Yes' : 'No'}
+                                </td>
                                 <td className="px-6 py-4 whitespace-nowrap">{p?.price}</td>
                                 {/* <td className="px-6 py-4 whitespace-nowrap">{p?.status}</td> */}
                                 <td className="px-6 py-4 whitespace-nowrap">

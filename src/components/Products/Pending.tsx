@@ -166,7 +166,8 @@ const ProductTable: React.FC = () => {
             dataIndex: 'action',
             render: (_text: any, _record: any) => (
                 <div className="flex mr-2 gap-4 ">
-                    <button className="hover:underline ">Deactivate</button>
+                    <button className="hover:underline ">Approve</button>
+                    <button className="hover:underline ">Decline</button>
                     <FaRegTrashAlt
                         className="text-red-500"
                         onClick={() => {

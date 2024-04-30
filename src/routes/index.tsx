@@ -10,6 +10,7 @@ import ForgotPassword from '../pages/ForgotPassword';
 import ConfirmCodePage from '../pages/ConfirmCodePage';
 import ResetPasswordPage from '../pages/ResetPasswordPage';
 import ProductsDash from '../pages/Products/ProductsDash';
+import ApperovedProducts from '../pages/Products/Approved';
 
 const Paths = () => {
     return (
@@ -26,6 +27,7 @@ const Paths = () => {
                 <Route path="/forgot-password" element={<ForgotPassword />} />
                 <Route path="/" element={<Dashboard />} />
                 <Route path="/products" element={<ProductsDash />} />
+                <Route path="/products/approved" element={<ApperovedProducts />} />
                 <Route path="/sellers" element={<SellerAnalysis />} />
                 <Route path="/sellers/pending" element={<PendingSellers />} />
                 <Route path="/sellers/approved" element={<ApprovedUsers />} />

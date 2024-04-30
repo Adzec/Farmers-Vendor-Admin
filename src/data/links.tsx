@@ -20,7 +20,7 @@ const navItems = [
         link: '/products',
         children: [
             // { label: 'All', link: '#' },
-            { label: 'Approved', link: '#' },
+            { label: 'Approved', link: '/products/approved' },
             { label: 'Pending', link: '#' },
             // { label: '', link: '#' },
         ],
