@@ -35,7 +35,7 @@ const UsersOverview = () => {
                         </span>
                     </div>
                     <div className="grid grid-cols-2 gap-4 mt-2">
-                        <p className="text-xl font-semibold text-gray-700">Actions</p>
+                        <p className="text-xl font-semibold text-gray-700">Actions:</p>
                         <div className="flex w-full gap-2 ">
                             <button className="bg-green-500 p-2 rounded-lg text-white hover:bg-green-700 transition-5">
                                 Approve
