@@ -7,6 +7,7 @@ import { Avatar } from 'antd';
 import { FiMoreVertical } from 'react-icons/fi';
 import { FaRegTrashAlt } from 'react-icons/fa';
 import { products } from '../../Data/Data';
+import { useNavigate } from 'react-router-dom';
 
 interface DataType {
     key?: React.Key;
@@ -25,6 +26,7 @@ const ProductTable: React.FC = () => {
     const [searchText, setSearchText] = useState<string>('');
     const [searchedColumn, setSearchedColumn] = useState('');
     const searchInput = useRef<InputRef>(null);
+    const navigate = useNavigate();
 
     const handleSearch = (
         selectedKeys: string[],
@@ -176,7 +178,7 @@ const ProductTable: React.FC = () => {
                     <FiMoreVertical
                         className="text-green-500"
                         onClick={() => {
-                            console.log('clicked');
+                            navigate(`/products/1`);
                         }}
                     />
                 </div>
