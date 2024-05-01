@@ -1,4 +1,4 @@
-import ProductDetails from '../../components/Global/ProductOverview';
+import ProductDetails from '../../components/Products/ProductOverview';
 import Layout from '../../components/Layout';
 
 const ProductOverviewPage = () => {

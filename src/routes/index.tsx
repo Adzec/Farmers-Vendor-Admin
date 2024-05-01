@@ -13,6 +13,7 @@ import ProductsDash from '../pages/Products/ProductsDash';
 import ApperovedProducts from '../pages/Products/Approved';
 import PendingProducts from '../pages/Products/Pending';
 import ProductOverviewPage from '../pages/Products/ProductOverviewPage';
+import SellerDetailsPage from '../pages/Sellers/SellerDetails';
 
 const Paths = () => {
     return (
@@ -33,6 +34,7 @@ const Paths = () => {
                 <Route path="/products/:id" element={<ProductOverviewPage />} />
                 <Route path="/products/pending" element={<PendingProducts />} />
                 <Route path="/sellers" element={<SellerAnalysis />} />
+                <Route path="/sellers/:id" element={<SellerDetailsPage />} />
                 <Route path="/sellers/pending" element={<PendingSellers />} />
                 <Route path="/sellers/approved" element={<ApprovedUsers />} />
             </Routes>
