@@ -1,5 +1,5 @@
 import Image from '../../assets/image.avif';
-// import ProductListing from '../Products/VendorProducts';
+import ProductListing from '../Products/VendorProducts';
 const UsersOverview = () => {
     return (
         <div className="flex flex-col gap-10">
@@ -52,10 +52,12 @@ const UsersOverview = () => {
                 </div>
             </section>
 
-            {/* <section>
-                <h2 className="text-white items-center text-center">View sellers products</h2>
+            <section>
+                <h2 className="text-white items-center text-center text-xl font-semibold my-3 capitalize">
+                    View sellers products
+                </h2>
                 <ProductListing />
-            </section> */}
+            </section>
         </div>
     );
 };

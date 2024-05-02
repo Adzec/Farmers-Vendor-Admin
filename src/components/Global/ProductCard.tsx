@@ -8,7 +8,7 @@ const ProductCard: React.FC<ProductProp> = ({ name, price, description, image })
 
     return (
         <div
-            className="w-full h-[400px] rounded overflow-hidden shadow-lg product-card cursor-pointer border border-secondary transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl mb-2"
+            className="w-full h-[400px] bg-[#eee] rounded overflow-hidden shadow-lg product-card cursor-pointer border border-secondary transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl mb-2"
             onClick={() => navigate(`/product/1`)}
         >
             <img className="w-full h-1/2 object-cover" src={image} alt={name} />
