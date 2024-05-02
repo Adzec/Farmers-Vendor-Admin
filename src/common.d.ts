@@ -14,3 +14,16 @@ export interface UserProps{
     email?: string;
     password?:string
 }
+
+
+
+export interface ProductProp {
+    id?: number;
+    name?: string;
+    price?: number;
+    description?: string; // Optional property denoted by '?'
+    category?: string;
+    inStock?: boolean;
+    image?:string
+    
+}
