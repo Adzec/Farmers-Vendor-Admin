@@ -9,6 +9,7 @@ import moment from 'moment';
 // import { useNavigate } from 'react-router-dom';
 import { FiMoreVertical } from 'react-icons/fi';
 import { FaRegTrashCan } from 'react-icons/fa6';
+import { useNavigate } from 'react-router-dom';
 
 interface DataType {
     key?: string;
@@ -73,6 +74,8 @@ const App: React.FC = () => {
     const [searchText, setSearchText] = useState('');
     const [searchedColumn, setSearchedColumn] = useState('');
     const searchInput = useRef<InputRef>(null);
+
+    const navigate = useNavigate();
 
     const handleSearch = (
         selectedKeys: string[],
@@ -222,9 +225,7 @@ const App: React.FC = () => {
                     />
                     <FiMoreVertical
                         className="text-green-500"
-                        onClick={() => {
-                            console.log('clicked');
-                        }}
+                        onClick={() => navigate(`/sellers/:id`)}
                     />
                 </div>
             ),

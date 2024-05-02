@@ -3,8 +3,10 @@ import { sellers } from '../../Data/Data';
 import { RiMore2Fill } from 'react-icons/ri';
 import Image from '../../assets/image.avif';
 import { Avatar } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 const SellersTable = () => {
+    const navigate = useNavigate();
     return (
         <section className="flex mt-10 flex-col h-auto">
             <h1 className="text-white p-[5px] text-2xl font-bold">Recent Sellers</h1>
@@ -21,7 +23,10 @@ const SellersTable = () => {
                                 <span>{s.phone}</span>
                             </div>
                             <div>
-                                <RiMore2Fill className="text-2xl text-green-700" />
+                                <RiMore2Fill
+                                    className="text-2xl text-green-700"
+                                    onClick={() => navigate(`//sellers/:id`)}
+                                />
                             </div>
                         </div>
                     </Card>

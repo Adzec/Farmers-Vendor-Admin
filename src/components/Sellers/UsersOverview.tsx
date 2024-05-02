@@ -1,7 +1,8 @@
 import Image from '../../assets/image.avif';
+// import ProductListing from '../Products/VendorProducts';
 const UsersOverview = () => {
     return (
-        <div>
+        <div className="flex flex-col gap-10">
             <section className="flex  bg-[whitesmoke] py-20 px-5 rounded-lg gap-10 flex-wrap md:flex-nowrap">
                 {/* photo */}
                 <div className="w-full md:w-[30%] border rounded-t-lg">
@@ -50,6 +51,11 @@ const UsersOverview = () => {
                     </div>
                 </div>
             </section>
+
+            {/* <section>
+                <h2 className="text-white items-center text-center">View sellers products</h2>
+                <ProductListing />
+            </section> */}
         </div>
     );
 };
