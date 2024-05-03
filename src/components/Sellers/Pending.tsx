@@ -6,7 +6,7 @@ import type { FilterDropdownProps } from 'antd/es/table/interface';
 import Highlighter from 'react-highlight-words';
 import { Avatar } from 'antd';
 import moment from 'moment';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { FiMoreVertical } from 'react-icons/fi';
 import { FaRegTrashCan } from 'react-icons/fa6';
 
@@ -69,7 +69,7 @@ const data: DataType[] = [
 ];
 
 const App: React.FC = () => {
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
     const [searchText, setSearchText] = useState('');
     const [searchedColumn, setSearchedColumn] = useState('');
     const searchInput = useRef<InputRef>(null);
@@ -223,7 +223,7 @@ const App: React.FC = () => {
                     <FiMoreVertical
                         className="text-green-500"
                         onClick={() => {
-                            console.log('clicked');
+                            navigate(`/sellers/1`);
                         }}
                     />
                 </div>

@@ -25,7 +25,7 @@ const SellersTable = () => {
                             <div>
                                 <RiMore2Fill
                                     className="text-2xl text-green-700"
-                                    onClick={() => navigate(`//sellers/:id`)}
+                                    onClick={() => navigate(`/sellers/:1`)}
                                 />
                             </div>
                         </div>

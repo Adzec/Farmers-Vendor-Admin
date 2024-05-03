@@ -225,7 +225,7 @@ const App: React.FC = () => {
                     />
                     <FiMoreVertical
                         className="text-green-500"
-                        onClick={() => navigate(`/sellers/:id`)}
+                        onClick={() => navigate(`/sellers/1`)}
                     />
                 </div>
             ),
