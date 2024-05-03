@@ -3,7 +3,7 @@ import { IconType } from 'react-icons';
 export interface CardProps {
     title?: string;
     text?: string;
-    amount?: string;
+    amount?: string | number;
     url?: string;
     icon?: IconType;
     color?: string;
