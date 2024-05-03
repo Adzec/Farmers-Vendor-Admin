@@ -62,7 +62,7 @@ const navItems = [
     {
         label: 'Categories',
         icon: Layers3,
-        link: '/',
+        link: '/categories',
     },
 
     {

@@ -27,3 +27,11 @@ export interface ProductProp {
     image?:string
     
 }
+
+
+export interface CategoryProp{
+id?:string;
+name:string;
+totals:number;
+
+}

@@ -245,3 +245,26 @@ export const products = [
         Status: 'Approved',
     },
 ];
+
+export const categories = [
+    { name: 'AgroChemicals', id: 1 },
+    { name: 'Animal Feeds', id: 2 },
+    { name: 'Cash Crops', id: 3 },
+    { name: 'Cereals', id: 4 },
+    { name: 'Farm tools and Equipment', id: 5 },
+    { name: 'Fishery', id: 6 },
+    { name: 'Flowers', id: 7 },
+    { name: 'Food Crop', id: 8 },
+    { name: 'Fruits', id: 9 },
+    { name: 'Herbs', id: 10 },
+    { name: 'Hive Products', id: 11 },
+    { name: 'Livestock', id: 12 },
+    { name: 'Livestock Feed', id: 13 },
+    { name: 'Nuts and Kernels', id: 14 },
+    { name: 'Others', id: 15 },
+    { name: 'Pets', id: 16 },
+    { name: 'Poultry', id: 17 },
+    { name: 'Seeds, seedlings, planting materials', id: 18 },
+    { name: 'Tools and Equipments', id: 19 },
+    { name: 'Vegetables', id: 20 },
+];

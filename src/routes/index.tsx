@@ -14,6 +14,7 @@ import ApperovedProducts from '../pages/Products/Approved';
 import PendingProducts from '../pages/Products/Pending';
 import ProductOverviewPage from '../pages/Products/ProductOverviewPage';
 import SellerDetailsPage from '../pages/Sellers/SellerDetails';
+import CategoriesPage from '../pages/CategoriesPage';
 
 const Paths = () => {
     return (
@@ -37,6 +38,7 @@ const Paths = () => {
                 <Route path="/sellers/:id" element={<SellerDetailsPage />} />
                 <Route path="/sellers/pending" element={<PendingSellers />} />
                 <Route path="/sellers/approved" element={<ApprovedUsers />} />
+                <Route path="/categories" element={<CategoriesPage />} />
             </Routes>
         </div>
     );
