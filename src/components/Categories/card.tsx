@@ -6,7 +6,7 @@ import { RiMore2Fill } from 'react-icons/ri';
 
 const Cards: React.FC<CategoryProp> = ({ name, totals }) => {
     return (
-        <Card className="bg-black-100 scale-95 shadow-customs">
+        <Card className="bg-black-200 scale-95 shadow-customs">
             <div className=" rounded-lg  flex gap-4 items-center justify-between text-gray-400">
                 <div className="flex flex-col">
                     <h2 className="text-xl font-bold mb-2">{name}</h2>
