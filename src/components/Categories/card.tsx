@@ -6,7 +6,7 @@ import { RiMore2Fill } from 'react-icons/ri';
 
 const Cards: React.FC<CategoryProp> = ({ name, totals }) => {
     return (
-        <Card className="bg-black-200 scale-95 shadow-customs">
+        <Card className="bg-gray-900 scale-95 shadow-customs">
             <div className=" rounded-lg  flex gap-4 items-center justify-between text-gray-400">
                 <div className="flex flex-col">
                     <h2 className="text-xl font-bold mb-2">{name}</h2>
@@ -25,7 +25,7 @@ const Cards: React.FC<CategoryProp> = ({ name, totals }) => {
                     className="flex items-center justify-between  h-24 w-24  rounded-full"
                     // style={{ backgroundColor: '#eeee' }}
                 >
-                    <RiMore2Fill className="text-primary text-4xl" />
+                    <RiMore2Fill className="text-green-600 text-4xl" />
                 </IconButton>
             </div>
         </Card>
